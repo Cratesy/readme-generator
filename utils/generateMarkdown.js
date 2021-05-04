@@ -11,18 +11,29 @@ const renderLicenseLink = (license) => {};
 const renderLicenseSection = (license) => {};
 
 // TODO: Create a function to generate markdown for README
-const generateMarkdown = (data) => {
-  return `# Project Title
+const generateMarkdown = (answers) => {
+  const {
+    title,
+    license,
+    description,
+    installation,
+    usage,
+    collaboration,
+    tests,
+    githubUrl,
+    emailAddress,
+  } = answers;
+  return `# ${title}
 
   ![mit license](https://img.shields.io/badge/license-MIT-green)
 
   ## Description
   
-  Project description goes here
+  ${description}
   
   ## Table of Contents
   
-    - [Project Title (question 1 - input)](#project-title-question-1---input)
+    - [${title}](#${title})
     - [Description](#description)
     - [Table of Contents](#table-of-contents)
     - [Installation](#installation)
@@ -34,32 +45,28 @@ const generateMarkdown = (data) => {
   
   ## Installation
 
-  \```
-  npm install
-  node index.js
-  \```
+  ${installation}
   
   ## Usage
   
-  - When the app is running answer all questions
-  - After all questions view generated README markdown file
+ ${usage}
   
   ## License
   
-  MIT License (question 2 - choices)
+  ${license}
   
   ## Contributing
 
-  Open an issue or a pull request and I will sort it.
+  ${collaboration}
   
   ## Tests
   
-  There are no tests for this app
+  ${tests}
   
   ## Questions
   
-  - View my [GitHub](https://github.com/Cratesy) profile (question 8 - input)
-  - Email me at mike@email.com (question 9 - input)
+  - View my [GitHub](${githubUrl})
+  - Email me at ${emailAddress}
 `;
 };
 
