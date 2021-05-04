@@ -1,15 +1,16 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
   {
     type: "input",
     message: "What is the title of your project?",
-    name: "Title",
+    name: "title",
   },
   {
-    type: "choice",
+    type: "list",
     message: "what license?",
     choices: ["MIT", "APACHE_2.0", "GPL_3.0", "BSD_3", "None"],
     name: "license",
@@ -55,7 +56,12 @@ const questions = [
 const writeToFile = (fileName, data) => {};
 
 // TODO: Create a function to initialize app
-const init = () => {};
+const init = async () => {
+  const answers = await inquirer.prompt(questions);
+
+  const generatedReadMePage = generateMarkdown(answers);
+  console.log(generatedReadMePage);
+};
 
 // Function call to initialize app
 init();
