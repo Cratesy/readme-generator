@@ -62,7 +62,7 @@ const writeToFile = (data) => {
       console.log("readme done!");
     }
   };
-  fs.writeFile("README.md", data, callback);
+  fs.writeFile("Generated_README.md", data, callback);
 };
 
 // TODO: Create a function to initialize app
