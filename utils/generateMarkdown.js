@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+//returns a license badge based on which license is passed in
 const renderLicenseBadge = (license) => {
   if (license === "MIT") {
     return "![MIT license](https://img.shields.io/badge/license-MIT-green)";
