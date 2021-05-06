@@ -44,13 +44,8 @@ const generateMarkdown = (answers) => {
 
   ${renderLicenseBadge(license)}
 
-  ## Description
-  
-  ${description}
-  
   ## Table of Contents
   
-  - [${title}](#${title})
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
@@ -59,6 +54,10 @@ const generateMarkdown = (answers) => {
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
+
+  ## Description
+  
+  ${description}
   
   ## Installation
 
