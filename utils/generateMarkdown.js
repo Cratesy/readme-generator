@@ -1,29 +1,26 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 const renderLicenseBadge = (license) => {
-  // <img
-  //   alt="AUR license badge"
-  //   src="https://img.shields.io/badge/license-Apache-blue"
-  // ></img>;
-  // <img
-  //   alt="APM badge"
-  //   src="https://img.shields.io/badge/license-MIT-green"
-  // ></img>;
-  // <img
-  //   alt="PyPI - License badge"
-  //   src="https://img.shields.io/badge/license-BSD-green"
-  // ></img>;
-  // <img
-  //   alt="Eclipse Marketplace badge"
-  //   src="https://img.shields.io/badge/license-GPL-blue"
-  // ></img>;
+  if (license === "MIT") {
+    return "![MIT license](https://img.shields.io/badge/license-MIT-green)";
+  }
+  if (license === "APACHE_2.0") {
+    return "![APACHE license](https://img.shields.io/badge/license-Apache-blue)";
+  }
+  if (license === "BSD_3") {
+    return "![BSD license](https://img.shields.io/badge/license-BSD-green)";
+  }
+  if (license === "GPL_3.0") {
+    return "![GPL license](https://img.shields.io/badge/license-GPL-blue)";
+  }
+  if (license === "none") {
+    return "no license";
+  }
 };
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-const renderLicenseLink = (license) => {
-  // https://img.shields.io/badge/license-${license}-<COLOR>
-};
+const renderLicenseLink = (license) => {};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -42,9 +39,10 @@ const generateMarkdown = (answers) => {
     githubUrl,
     emailAddress,
   } = answers;
+
   return `# ${title}
 
-  ![mit license](https://img.shields.io/badge/license-MIT-green)
+  ${renderLicenseBadge(license)}
 
   ## Description
   
