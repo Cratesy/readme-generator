@@ -16,11 +16,16 @@
 
 ## Description
 
+When run, a user is prompted with questions for the user to fill out.
+Doing this generates a readme file which uses information from the questions answered.
+
 ## Installation
 
 `npm install inquirer`
 
 ## Usage
+
+Make a professional looking README.md by answering a couple of questions and the file is generated.
 
 ## License
 
@@ -28,9 +33,15 @@ MIT License
 
 ## Contributing
 
+Myself
+
 ## Tests
 
+None were needed
+
 ## Questions
+
+Any questions please feel free to email me or contact me on github;
 
 - View my [GitHub](${githubUrl})
 - Email me at ${emailAddress}
