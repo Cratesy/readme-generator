@@ -62,6 +62,7 @@ const writeToFile = (data) => {
       console.log("readme done!");
     }
   };
+  // change fileName to suit
   fs.writeFile("Generated_README.md", data, callback);
 };
 

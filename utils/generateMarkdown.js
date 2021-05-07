@@ -17,13 +17,29 @@ const renderLicenseBadge = (license) => {
   }
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-const renderLicenseLink = (license) => {};
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-const renderLicenseSection = (license) => {};
+// link for license
+const getLicenseLink = (license) => {
+  switch (license) {
+    case "MIT":
+      return "https://opensource.org/licenses/MIT";
+      break;
+    case "APACHE_2.0":
+      return "https://opensource.org/licenses/Apache-2.0";
+      break;
+    case "GPL_3.0":
+      return "https://www.gnu.org/licenses/gpl-3.0.en.html";
+      break;
+    case "BSD_3":
+      return "https://opensource.org/licenses/BSD-3-Clause";
+      break;
+    case "None":
+      return "";
+      break;
+    default:
+      return "";
+      break;
+  }
+};
 
 //Function to generate markdown for README
 const generateMarkdown = (answers) => {
@@ -68,7 +84,7 @@ const generateMarkdown = (answers) => {
   
   ## License
   
-  ${license}
+  ${license} ${getLicenseLink(license)}
   
   ## Contributing
 
