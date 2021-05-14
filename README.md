@@ -21,8 +21,9 @@ I've been tasked with making a README file generator using inquirer.
 ## Installation
 
 ```
-npm init -y
-npm install inquirer
+git clone git@github.com:Cratesy/readme-generator.git
+cd readme-generator
+npm install
 ```
 
 ## Usage
